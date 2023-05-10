@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js",
-    "build:watch": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js --watch",
-    "start": "nodemon dist/main.js"
+    "build:watch": "npm run build -- --watch",
+    "start": "concurrently \"npm run build:watch\" \"nodemon dist/main.js\""
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.1.1",
+    "concurrently": "^8.0.1",
     "esbuild": "^0.17.18",
     "nodemon": "^2.0.22",
     "prettier": "^2.8.8",
