@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "lib": ["ESNext"],
+    "moduleResolution": "node",
+
+    "module": "commonjs",
+    "declaration": true,
+    "removeComments": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "es2017",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "baseUrl": "./",
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules/**/*"],
+  "ts-node": {
+    "require": ["tsconfig-paths/register"]
+  }
+}

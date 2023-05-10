@@ -1,0 +1,26 @@
+{
+  "name": "grokking_algorithms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js",
+    "build:watch": "esbuild src/main.ts --bundle --platform=node --outfile=dist/main.js --watch",
+    "start": "nodemon dist/main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.1.1",
+    "esbuild": "^0.17.18",
+    "nodemon": "^2.0.22",
+    "prettier": "^2.8.8",
+    "ts-loader": "^9.4.2",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "random": "^4.1.0"
+  }
+}
