@@ -5,6 +5,10 @@ import { recursiveSum } from './recursive-sum';
 import { counter, quickSort } from './quick-sort';
 import { createGraph } from './Graph';
 import { breadthFirstSearch, graphSource } from './breadth-first-search';
+import {
+  dijkstrasAlgorithm,
+  graphSource as dijkstraGraphSource,
+} from './dijkstras-algorithm';
 
 function testBinarySearch(): void {
   const numbers = Array.from({ length: 8 }, () => random.int(1, 100)).sort(
@@ -51,8 +55,16 @@ function testBreadthSearch() {
   console.log(path);
 }
 
+function testDijkstrasAlgorithm() {
+  const graph = createGraph(dijkstraGraphSource, 'book');
+  const result = dijkstrasAlgorithm(graph, 'drums');
+  console.log(result);
+}
+
 // testBinarySearch();
 // testSelectionSort();
 // console.log('Recursive sum: ', recursiveSum([1, 2, 3, 4, 6]));
 // testQuickSort();
 // testBreadthSearch();
+
+testDijkstrasAlgorithm();
