@@ -3,6 +3,8 @@ import random from 'random';
 import { selectionSort } from './selection-sort';
 import { recursiveSum } from './recursive-sum';
 import { counter, quickSort } from './quick-sort';
+import { createGraph } from './Graph';
+import { breadthFirstSearch, graphSource } from './breadth-first-search';
 
 function testBinarySearch(): void {
   const numbers = Array.from({ length: 8 }, () => random.int(1, 100)).sort(
@@ -43,9 +45,14 @@ function testQuickSort() {
   console.log('Steps: ', counter);
 }
 
+function testBreadthSearch() {
+  const graph = createGraph(graphSource, 'book');
+  const path = breadthFirstSearch(graph, 'piano');
+  console.log(path);
+}
+
 // testBinarySearch();
-//
 // testSelectionSort();
 // console.log('Recursive sum: ', recursiveSum([1, 2, 3, 4, 6]));
-
-testQuickSort();
+// testQuickSort();
+// testBreadthSearch();
